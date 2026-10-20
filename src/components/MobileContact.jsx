@@ -10,12 +10,12 @@ const PANEL_TEXT = '#F4F1EA';
 const PANEL_MUTED = 'rgba(244,241,234,0.55)';
 
 /* ---- Your details (edit here) ---- */
-const EMAIL = 'me.ramzan.zulfiqar@gmail.com';
-const PHONE_DISPLAY = '+971 55 499 1245';
-const PHONE_RAW = '971554991245';
-const CITY = 'Dubai, UAE';
-const TIMEZONE = 'Asia/Dubai';
-const TZ_OFFSET_HOURS = 4;
+const EMAIL = 'nabeelmuhammad021@gmail.com';
+const PHONE_DISPLAY = '+92 320 1421182';
+const PHONE_RAW = '923201421182';
+const CITY = 'Lahore, Pakistan';
+const TIMEZONE = 'Asia/karachi';
+const TZ_OFFSET_HOURS = 5;
 const RESPONSE_TIME = 'Replies within 24 hours';
 const OPEN_TO = ['Full-time', 'Freelance', 'Remote'];
 const TOPICS = ['Full-time role', 'Freelance project', 'Collaboration', 'Just saying hi'];

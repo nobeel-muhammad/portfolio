@@ -5,12 +5,10 @@ import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 
 // Used by the mobile physics version — keep this shape
 const skillGroups = [
-  { category: 'Programming & Scripting', icon: '{ }', skills: ['JavaScript', 'TypeScript', 'Python', 'React.js', 'Node.js', 'C/C++', 'VB.NET'] },
-  { category: 'RPA & Automation', icon: '⚙', skills: ['UiPath', 'Power Automate', 'Automation Anywhere', 'n8n'] },
-  { category: 'AI/ML & Workflow Tools', icon: '◈', skills: ['OpenAI Whisper', 'Docker', 'ML Model Integration', 'LLM Pipelines'] },
-  { category: 'Web & API Tools', icon: '⌁', skills: ['REST APIs', 'Postman', 'Selenium', 'npm', 'CPanel'] },
-  { category: 'Databases & Cloud', icon: '▣', skills: ['MySQL', 'MongoDB', 'Google Cloud'] },
-  { category: 'Systems & Platforms', icon: '◻', skills: ['HubSpot', 'Zoho CRM', 'SAP Fiori', 'SharePoint', 'Ghost CMS'] },
+  { category: 'Discovery & Briefing', icon: '◈', skills: ['Client Intake', 'Audience Analysis', 'Scope & Deliverables', 'Design Brief', 'Strategy & Goals'] },
+  { category: 'Research & Concepting', icon: '◎', skills: ['Moodboarding', 'Competitor Audit', 'Thumbnail Sketching', 'Wireframing', 'Visual Identity Setup'] },
+  { category: 'Execution & Visual Design', icon: '✎', skills: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'AI Generation & Retouching', 'Color Hierarchy', 'Typography & Layout', 'Motion & Reels'] },
+  { category: 'Review, Export & Delivery', icon: '↗', skills: ['Stakeholder Review', 'Revision Tweaks', 'Print Prep (CMYK/Bleed)', 'Digital Exports (PNG/MP4)', 'Source File Packaging', 'Asset Archiving'] },
 ];
 
 // Desktop: the toolkit as a workflow, idea → production. Edit freely.
@@ -18,30 +16,30 @@ const STAGES = [
   {
     step: 'Think',
     glyph: '◈',
-    title: 'AI Automation',
-    outcome: 'Workflows that think and run themselves.',
-    tools: ['n8n', 'LLM Pipelines', 'Python', 'OpenAI Whisper', 'ML Model Integration'],
+    title: 'Discovery & Briefing',
+    outcome: 'Understanding core objectives, audience needs, and project parameters.',
+    tools: ['Client Intake', 'Audience Analysis', 'Scope & Deliverables', 'Design Brief', 'Strategy & Goals'],
   },
   {
-    step: 'Automate',
-    glyph: '⚙',
-    title: 'Enterprise RPA',
-    outcome: 'Manual, repetitive work taken off your team.',
-    tools: ['UiPath', 'Power Automate', 'Automation Anywhere', 'SAP Fiori', 'VB.NET', 'Selenium'],
+    step: 'Explore',
+    glyph: '◎',
+    title: 'Research & Concepting',
+    outcome: 'Gathering visual references, defining visual direction, and rapid layout mapping.',
+    tools: ['Moodboarding', 'Competitor Audit', 'Thumbnail Sketching', 'Wireframing', 'Visual Identity Setup'],
   },
   {
     step: 'Build',
-    glyph: '{ }',
-    title: 'Full-Stack Web',
-    outcome: 'Fast, polished products people enjoy using.',
-    tools: ['React.js', 'JavaScript', 'TypeScript', 'Node.js', 'REST APIs', 'MySQL', 'MongoDB', 'npm', 'C/C++'],
+    glyph: '✎',
+    title: 'Execution & Visual Design',
+    outcome: 'Crafting polished, high-fidelity layouts, asset retouching, and typography.',
+    tools: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'AI Generation & Retouching', 'Color Hierarchy', 'Typography & Layout', 'Motion & Reels'],
   },
   {
     step: 'Ship',
     glyph: '↗',
-    title: 'Integrations & Delivery',
-    outcome: 'Connected, deployed and kept running.',
-    tools: ['HubSpot', 'Zoho CRM', 'SharePoint', 'Ghost CMS', 'Docker', 'Google Cloud', 'CPanel', 'Postman'],
+    title: 'Review, Export & Delivery',
+    outcome: 'Refining based on feedback, exporting production-ready files, and archiving assets.',
+    tools: ['Stakeholder Review', 'Revision Tweaks', 'Print Prep (CMYK/Bleed)', 'Digital Exports (PNG/MP4)', 'Source File Packaging', 'Asset Archiving'],
   },
 ];
 
@@ -307,7 +305,7 @@ export default function Skills() {
 
   const stats = [
     { v: String(STAGES.length).padStart(2, '0'), l: 'Stages' },
-    { v: String(TOTAL_TOOLS), l: 'Tools' },
+    { v: String(TOTAL_TOOLS), l: 'Tools & Skills' },
   ];
 
   return (
@@ -326,7 +324,7 @@ export default function Skills() {
             transition={{ duration: 1, ease: EASE }}
             style={{ fontSize: 'clamp(3.2rem, 7.5vw, 7rem)', fontWeight: 700, letterSpacing: '-0.045em', lineHeight: 0.95, color: t.text, margin: 0, paddingTop: '0.04em', paddingBottom: '0.26em', marginBottom: '-0.16em' }}
           >
-            How I build<span style={{ color: t.accent }}>.</span>
+            How I design<span style={{ color: t.accent }}>.</span>
           </motion.h2>
         </motion.div>
 

@@ -5,11 +5,11 @@ import { ArrowRight, MapPin } from 'lucide-react';
 const EASE = [0.16, 1, 0.3, 1];
 
 /* ---- Your details (edit here) ---- */
-const ROLE = 'AI Automation & Software Engineer';
+const ROLE = 'Graphic & Visual Communication Designer ';
 const FIRST = 'Muhammad';
-const LAST = 'Ramzan';
-const CITY = 'Dubai, UAE';
-const TIMEZONE = 'Asia/Dubai';
+const LAST = 'Nabeel';
+const CITY = 'Lahore, Pakistan';
+const TIMEZONE = 'Asia/karachi';
 
 function useDubaiTime() {
   const fmt = () =>

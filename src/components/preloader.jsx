@@ -239,7 +239,7 @@ export default function Preloader({ onComplete }) {
         >
           <span style={{ color: TEXT, fontWeight: 700, letterSpacing: '0.04em', fontSize: '0.85rem' }}>Mr.</span>
           <span>PORTFOLIO · ©{new Date().getFullYear()}</span>
-          {!NARROW && <span>DUBAI · UAE</span>}
+          {!NARROW && <span>Lahore · Pakistan</span>}
         </motion.div>
 
         {/* Name (decodes letter by letter) */}

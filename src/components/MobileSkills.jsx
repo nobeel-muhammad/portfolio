@@ -12,7 +12,7 @@ import {
 } from 'framer-motion';
 
 const EASE = [0.16, 1, 0.3, 1];
-const SLUGS = ['code', 'rpa', 'ai-ml', 'web-api', 'data-cloud', 'platforms'];
+const SLUGS = ['think', 'explore', 'build', 'ship'];
 const AUTO_MS = 3600;
 const SCRAMBLE = '!<>-_\\/[]{}—=+*^?#';
 
@@ -269,7 +269,7 @@ function SkillTerminal({ skillGroups, t }) {
             <span key={c} style={{ width: 10, height: 10, borderRadius: '50%', backgroundColor: c }} />
           ))}
           <span className="mono" style={{ marginLeft: 8, fontSize: '0.62rem', color: TERM.muted, letterSpacing: '0.04em' }}>
-            usman@portfolio: ~/skills
+            nabeel@portfolio: ~/skills
           </span>
           <span
             className="mono"
@@ -443,8 +443,8 @@ export default function MobileSkills({ skillGroups, theme: t, sectionRef }) {
           transition={{ delay: 0.5 }}
           style={{ display: 'flex', gap: 18, fontSize: '0.65rem', letterSpacing: '0.12em', color: t.text }}
         >
-          <span><strong style={{ fontSize: '1rem' }}>{String(skillGroups.length).padStart(2, '0')}</strong> DOMAINS</span>
-          <span><strong style={{ fontSize: '1rem' }}>{allSkills.length}</strong> TOOLS</span>
+<span><strong style={{ fontSize: '1rem' }}>{String(skillGroups.length).padStart(2, '0')}</strong> STAGES</span>
+<span><strong style={{ fontSize: '1rem' }}>{allSkills.length}</strong> TOOLS & SKILLS</span>
           <span><strong style={{ fontSize: '1rem' }}>{String(LANGUAGES.length).padStart(2, '0')}</strong> LANGUAGES</span>
         </motion.div>
       </div>
