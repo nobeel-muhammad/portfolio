@@ -160,7 +160,7 @@ export default function About() {
               marginBottom: isMobile ? '1.5rem' : '3rem',
             }}
           >
-            Graphic and visual communication designer with <strong>5 years </strong>of experience specializing in digital media campaigns, 
+            Graphic and visual communication designer with <strong>4 years </strong>of experience specializing in digital media campaigns, 
             social media graphics, print collateral, and photo manipulation. Experienced in 
             branding, promotional reel concepts, and visual identity design.
           </motion.p>
