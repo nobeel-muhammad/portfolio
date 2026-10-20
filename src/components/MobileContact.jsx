@@ -4,7 +4,7 @@ import { Mail, Phone, MessageCircle, Copy, Check, ArrowRight, Clock, MapPin } fr
 import emailjs from '@emailjs/browser';
 
 const EASE = [0.16, 1, 0.3, 1];
-const GOLD = '#D7C49E';
+const GOLD = '#7c7c7c';
 const PANEL = '#1d1a28';
 const PANEL_TEXT = '#F4F1EA';
 const PANEL_MUTED = 'rgba(244,241,234,0.55)';
@@ -24,7 +24,7 @@ const WHATSAPP_TEXT = 'Hi! I came across your portfolio and would like to connec
 function getColors(isDark) {
   return isDark
     ? { bg: '#121018', text: '#F4F1EA', muted: 'rgba(244,241,234,0.55)', line: 'rgba(244,241,234,0.14)', tile: '#1d1a28', tileEdge: 'rgba(244,241,234,0.08)' }
-    : { bg: '#D7C49E', text: '#111111', muted: 'rgba(17,17,17,0.6)', line: 'rgba(17,17,17,0.2)', tile: '#343148', tileEdge: 'rgba(0,0,0,0.1)' };
+    : { bg: '#7c7c7c', text: '#111111', muted: 'rgba(17,17,17,0.6)', line: 'rgba(17,17,17,0.2)', tile: '#343148', tileEdge: 'rgba(0,0,0,0.1)' };
 }
 
 /* Masked line reveal */
