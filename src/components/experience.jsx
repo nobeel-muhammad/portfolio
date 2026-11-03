@@ -45,7 +45,7 @@ const experiences = [
       'Edited and color-corrected videos in Premiere Pro for final delivery',
       'Created social media visuals using Photoshop and Illustrator',
     ],
-    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
+    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro', 'Photography', 'Videography'],
     accent: '#343148',
   },
   {
@@ -67,7 +67,7 @@ const experiences = [
     accent: '#343148',
   },
   {
-    role: 'Video Editor & Motion Graphics Designer',
+    role: 'Video Editor & Graphics Designer',
     company: 'Flick Media Art',
     location: 'Lahore, Pakistan',
     type: 'On-Site · Part Time',
@@ -81,7 +81,7 @@ const experiences = [
       'Edited YouTube videos with motion sequences in Premiere Pro',
       'Built visual assets for channels using Photoshop and Illustrator',
     ],
-    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro', 'Photography', 'Videography'],
+    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
     accent: '#343148',
   },
 ];

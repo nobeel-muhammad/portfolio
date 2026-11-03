@@ -6,18 +6,18 @@ import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 
 const education = [
   {
-    degree: 'Bachelors in Computer Science — BSCS (Honors)',
-    institution: 'University of Central Punjab',
+    degree: 'Bachelors in Graphic Design — BSCS (Honors)',
+    institution: 'Government College University, Lahore',
     location: 'Lahore, Pakistan',
-    period: 'June 2021 – July 2025',
+    period: 'June 2019 – July 2023',
     details: 'Major: Data Science, Artificial Intelligence, Data Structures, LLMs',
-    subjects: ['DSA', 'DAA', 'Artificial Intelligence', 'LLMs', 'Data Science'],
+    subjects: ['Ps', 'Ai', 'Premier Pro', 'Film Making', 'Print Making'],
   },
   {
     degree: 'Intermediate of Computer Science — ICS',
     institution: 'Punjab Group of Colleges',
     location: 'Lahore, Pakistan',
-    period: 'May 2019 – March 2021',
+    period: 'May 2018 – March 2019',
     details: 'Subjects: Computer Science, Maths, Physics',
     subjects: ['Computer Science', 'Mathematics', 'Physics'],
   },
@@ -25,19 +25,19 @@ const education = [
 
 const achievements = [
   {
-    title: 'Team Leadership Award',
-    org: 'Sybros Tech',
-    desc: 'Led the RPA team to deliver enterprise automations. Earned a LinkedIn recommendation from the CEO for leadership and technical excellence.',
+    title: 'Turkish Print Making Award',
+    org: 'AlHamra',
+    desc: 'Earned a distinction award at a 3-day Turkish calligraphic printmaking workshop led by master artists.',
   },
   {
-    title: 'RPA Workshop Speaker',
-    org: 'UMT × Sybros Tech',
-    desc: 'Conducted RPA workshop hosted by UMT\'s Department of AI. Contributed to signing of MoU offering internship opportunities for students.',
+    title: 'Wall Art Competition',
+    org: 'Master Paints',
+    desc: 'Competed in a live mural painting competition, turning design concepts into large-scale wall art.',
   },
   {
-    title: 'UAE Enterprise Projects',
-    org: 'Impact BBDO',
-    desc: 'Led AI-driven automation and software projects across the UAE using RPA, n8n, Python, React.js, Node.js, and Docker in multiple sectors.',
+    title: 'Excellence Award, Pakistan Flood Relief',
+    org: 'Al Mustafa Welfare Trust',
+    desc: 'Volunteered in Pakistan flood relief, managing logistics and aid distribution for affected families.',
   },
 ];
 
