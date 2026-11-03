@@ -12,76 +12,76 @@ const MAX_MONTHS = 13; // longest tenure, used to scale the tenure bars
 
 const experiences = [
   {
-    role: 'Software Developer',
-    company: 'IMPACT BBDO',
-    navLabel: 'BBDO', // short name shown in the floating company bar
-    location: 'Dubai, UAE',
+    role: 'Senior Graphic Designer',
+    company: 'Al Mustafa Welfare Trust',
+    navLabel: 'AlMustafa', // short name shown in the floating company bar
+    location: 'Lahore, Pakistan',
     type: 'On-Site · Full Time',
-    period: 'Apr 2026 – Present',
-    duration: '6 months',
+    period: 'Nov 2023 – Present',
+    duration: '3 years',
     description:
-      'Building UI components and resolving UI/UX issues for a global creative agency, while keeping CRM integrations and CMS-driven sites running smoothly in production.',
+      'Shaping brand identity and visual content for a welfare organization, delivering print, digital, and AI-driven designs that turn concepts into engaging visuals.',
     highlights: [
-      'Built UI components using React.js, HTML, SCSS, and JavaScript',
-      'Debugged and resolved UI/UX issues based on visual QA feedback',
-      'Managed builds, deployments, and CRM integrations',
-      'Maintained responsive websites within a Ghost/Handlebars CMS environment',
+      'Designed brand identity assets using Photoshop, Illustrator, and Figma',
+      'Created print materials including brochures, banners, and flyers',
+      'Produced digital graphics and visuals for social media campaigns',
+      'Used AI tools to speed up concept creation and visual production',
     ],
-    tags: ['React.js', 'SCSS', 'JavaScript', 'Ghost CMS', 'QA'],
+    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
     accent: '#343148',
   },
   {
-    role: 'Software Engineer',
-    company: 'DUOFANKAAR',
-    location: 'Dubai, UAE',
-    type: 'Hybrid · Full Time',
-    period: 'Apr 2025 – Mar 2026',
+    role: 'Multimedia Designer',
+    company: 'IronGear',
+    location: 'Lahore, Pakistan',
+    type: 'On-Site · Full Time',
+    period: 'Dec 2022 – Jul 2023',
+    duration: '8 months',
+    description:
+      'Creating print designs, digital graphics, and video content for IRONGEAR, handling every stage from concept and filming to final post-production edits.',
+    highlights: [
+      'Designed print materials and digital graphics for marketing campaigns',
+      'Planned concept shoots and directed filming for brand video content',
+      'Edited and color-corrected videos in Premiere Pro for final delivery',
+      'Created social media visuals using Photoshop and Illustrator',
+    ],
+    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
+    accent: '#343148',
+  },
+  {
+    role: 'Graphic Designer',
+    company: 'Zigzag Media',
+    location: 'Lahore, Pakistan',
+    type: 'On-Site · Full Time',
+    period: 'Dec 2021 – Nov 2022',
     duration: '12 months',
     description:
-      'Owned both ends of the stack — reusable React front ends on one side, n8n and Node.js automation pipelines on the other — shipping AI-driven features into production.',
+      'Delivering print, digital, and motion design for Zigzag Media, taking projects from early artwork and layouts through to final animated video edits.',
     highlights: [
-      'Built React front ends with reusable components and API integrations using JavaScript and npm',
-      'Developed n8n and Node.js back ends with ML-powered workflows and automation pipelines',
-      'Managed builds, deployments, and CRM integrations through CPanel and REST APIs',
-      'Delivered AI-driven automation features and managed production releases',
+      'Designed social media post suites for brand and client campaigns',
+      'Created print layouts including flyers, posters, and brochures',
+      'Produced animated videos from initial artwork to final motion edits',
+      'Built visual assets using Photoshop, Illustrator, and Premiere Pro',
     ],
-    tags: ['React.js', 'Node.js', 'n8n', 'ML Pipelines', 'REST APIs', 'CPanel'],
+    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
     accent: '#343148',
   },
   {
-    role: 'RPA Developer',
-    company: 'Sybros Tech',
-    location: 'Lahore, Pakistan',
-    type: 'On-Site · Full Time',
-    period: 'Mar 2024 – Apr 2025',
-    duration: '13 months',
-    description:
-      'Led an RPA team building end-to-end automations across SAP Fiori/HANA and CRM systems, taking projects from scoping through delivery, mentoring, and client training.',
-    highlights: [
-      'Led RPA team delivering end-to-end automations for SAP Fiori/HANA and CRMs using UiPath, Python, and APIs',
-      'Built workflows eliminating manual bottlenecks in finance, procurement, and sales',
-      'Managed full project lifecycle, mentoring developers and providing client and university trainings',
-      'Earned LinkedIn recommendation from CEO for leadership and technical excellence',
-    ],
-    tags: ['UiPath', 'Power Automate', 'SAP Fiori', 'Python', 'APIs', 'Team Lead'],
-    accent: '#343148',
-  },
-  {
-    role: 'Artificial Intelligence Trainee',
-    company: 'SAMSUNG INNOVATION',
+    role: 'Video Editor & Motion Graphics Designer',
+    company: 'Flick Media Art',
     location: 'Lahore, Pakistan',
     type: 'On-Site · Part Time',
-    period: 'Dec 2023 – Mar 2024',
-    duration: '4 months',
+    period: 'Jun 2021 – Dec 2021',
+    duration: '6 months',
     description:
-      'Built ML fundamentals from the ground up — linear algebra through applied NLP — and used them to develop a predictive model for early inflammation detection.',
+      'Creating YouTube thumbnails, promotional graphics, and video content for YouTube channels, handling everything from design to final edits and motion.',
     highlights: [
-      'Solid ML fundamentals in linear algebra, probability, and statistics',
-      'Hands-on Python experience (NumPy, Pandas) for data preprocessing and analysis',
-      'Applied supervised, unsupervised, and NLP techniques to extract actionable insights',
-      'Developed predictive model for Cytokine protein levels supporting early inflammation detection',
+      'Designed high-click YouTube thumbnails to boost channel engagement',
+      'Created promotional graphics and print assets for client campaigns',
+      'Edited YouTube videos with motion sequences in Premiere Pro',
+      'Built visual assets for channels using Photoshop and Illustrator',
     ],
-    tags: ['Python', 'NumPy', 'Pandas', 'ML', 'NLP', 'Deep Learning'],
+    tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro', 'Photography', 'Videography'],
     accent: '#343148',
   },
 ];
@@ -624,8 +624,8 @@ export default function Experience() {
         </div>
         <div style={{ display: 'flex', gap: '3.5rem', paddingBottom: '0.6rem' }}>
           {[
-            { v: '~3', l: 'Years' },
-            { v: '04', l: 'Companies' },
+            { v: '5', l: 'Years' },
+            { v: '03', l: 'Companies' },
             // { v: '02', l: 'Countries' },
           ].map((s, i) => (
             <motion.div

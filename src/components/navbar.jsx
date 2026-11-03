@@ -13,10 +13,10 @@ const SECTIONS = [
   { id: 'education', label: 'Education', note: 'BSCS · Honors' },
   { id: 'contact', label: 'Contact', note: "Let's talk" },
 ];
-const EMAIL = 'me.ramzan.zulfiqar@gmail.com';
+const EMAIL = 'nabeelmuhammad021@gmail.com';
 const SOCIALS = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammad-ramzan-111576246/' },
-  { label: 'GitHub', href: 'https://github.com/me-ramzan' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammad-nabeel-527154194/' },
+  { label: 'Behance', href: 'https://www.behance.net/muhammadnabeel30' },
 ];
 
 /* The island is always dark (like the Experience role bar) — premium in both themes */
@@ -307,7 +307,7 @@ export default function Navbar() {
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2px 4px 14px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                       <span className="mono" style={{ color: GOLD, fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.06em' }}>Mr.</span>
-                      <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>Muhammad Ramzan</span>
+                      <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>Muhammad Nabeel</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     {/* Theme toggle beside the close button */}

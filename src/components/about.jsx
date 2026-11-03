@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import alMustafaLogo from '../assets/images/al-mustafa-logo.svg';
 import irongearLogo from '../assets/images/irongear.png';
+import secondcupLogo from '../assets/images/sc.png';
+import popcornLogo from '../assets/images/pop-corn.jpg';
+import hubLogo from '../assets/images/hub.jpg';
+import coffeeLogo from '../assets/images/Untitled-1.png';
 import duofankaarLogo from '../assets/images/duofankaar.png';
 import samsungLogo from '../assets/images/samsung.png';
 import gsap from 'gsap';
@@ -13,6 +17,10 @@ gsap.registerPlugin(ScrollTrigger);
 const companies = [
   { name: 'Al Mustafa', logo: alMustafaLogo },
   { name: 'Irongear', logo: irongearLogo },
+  { name: 'Second Cup', logo: secondcupLogo, scale: 2.2, y: 24 },
+  { name: 'Pop Corn', logo: popcornLogo },
+  { name: 'The Hub', logo: hubLogo },
+  { name: 'Coffee Planet', logo: coffeeLogo, scale: 2.2 },
   // { name: 'Duofankaar', logo: duofankaarLogo },
   // { name: 'Samsung', logo: samsungLogo },
 ];
@@ -144,7 +152,7 @@ export default function About() {
               marginBottom: '2rem',
             }}
           >
-            <span style={{ color: t.accent }}>Engineering Excellence</span><br />
+            <span style={{ color: t.accent }}>Creative Excellence</span><br />
             <span style={{ WebkitTextStroke: `1.5px ${t.stroke}`, color: 'transparent' }}>at Every Layer</span>
           </motion.h2>
 
@@ -226,6 +234,7 @@ export default function About() {
                   maxHeight: isMobile ? '60px' : '100px',
                   maxWidth: isMobile ? '110px' : '180px',
                   objectFit: 'contain',
+                  transform: `translateY(${company.y || 0}px) scale(${company.scale || 1})`,
                 }}
               />
             </div>

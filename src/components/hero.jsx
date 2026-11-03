@@ -25,9 +25,9 @@ const ROLE = 'Graphic & Visual Communication Designer';
 const FIRST = 'MUHAMMAD';
 const LAST = 'NABEEL';
 const STATS = [
-  { value: '~3', unit: 'yrs', label: 'Experience' },
-  { value: '04', unit: '', label: 'Companies' },
-  { value: 'AI · RPA · Web', unit: '', label: 'Core expertise' },
+  { value: '5', unit: 'yrs', label: 'Experience' },
+  { value: '03', unit: '', label: 'Companies' },
+  { value: 'Ps · Ai · Gen-AI', unit: '', label: 'Core expertise' },
 ];
 const CONTACTS = [
   { icon: <MapPin size={12} />, text: 'Lahore, Pakistan', href: 'https://maps.google.com/?q=Dubai,+UAE' },
