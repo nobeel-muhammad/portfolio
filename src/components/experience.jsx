@@ -625,7 +625,7 @@ export default function Experience() {
         <div style={{ display: 'flex', gap: '3.5rem', paddingBottom: '0.6rem' }}>
           {[
             { v: '5', l: 'Years' },
-            { v: '03', l: 'Companies' },
+            { v: '04', l: 'Companies' },
             // { v: '02', l: 'Countries' },
           ].map((s, i) => (
             <motion.div

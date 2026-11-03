@@ -26,7 +26,7 @@ const FIRST = 'MUHAMMAD';
 const LAST = 'NABEEL';
 const STATS = [
   { value: '5', unit: 'yrs', label: 'Experience' },
-  { value: '03', unit: '', label: 'Companies' },
+  { value: '04', unit: '', label: 'Companies' },
   { value: 'Ps · Ai · Gen-AI', unit: '', label: 'Core expertise' },
 ];
 const CONTACTS = [
