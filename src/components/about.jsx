@@ -152,7 +152,7 @@ export default function About() {
               marginBottom: '2rem',
             }}
           >
-            <span style={{ color: t.accent }}>Creative Excellence</span><br />
+            <span style={{ color: t.accent }}>Visual Excellence</span><br />
             <span style={{ WebkitTextStroke: `1.5px ${t.stroke}`, color: 'transparent' }}>at Every Layer</span>
           </motion.h2>
 
