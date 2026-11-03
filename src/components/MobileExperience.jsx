@@ -32,7 +32,9 @@ function DeckCard({ exp, index, total, step, scrollX, t, onOpen, cardWidth }) {
         flex: `0 0 ${cardWidth}px`,
         scrollSnapAlign: 'center',
         scrollSnapStop: 'always',
-        backgroundColor: t.card,
+        background: exp.image
+          ? `linear-gradient(180deg, rgba(38,35,58,0.95) 0%, rgba(52,49,72,0.82) 50%, rgba(38,35,58,0.95) 100%), url(${exp.image}) ${exp.pos || 'center'} / cover no-repeat`
+          : t.card,
         color: t.cardText,
         borderRadius: 24,
         padding: '1.75rem 1.4rem 1.4rem',
@@ -201,7 +203,9 @@ function HighlightsSheet({ exp, index, total, t, onClose }) {
           maxHeight: '86vh',
           display: 'flex',
           flexDirection: 'column',
-          backgroundColor: t.panel,
+          background: exp.image2
+            ? `linear-gradient(180deg, ${t.panel}F2 0%, ${t.panel}CC 100%), url(${exp.image2}) ${exp.pos2 || 'center'} / cover no-repeat`
+            : t.panel,
           color: t.panelText,
           borderTopLeftRadius: 28,
           borderTopRightRadius: 28,

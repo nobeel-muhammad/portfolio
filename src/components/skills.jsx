@@ -7,7 +7,7 @@ import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 const skillGroups = [
   { category: 'Discovery & Briefing', icon: '◈', skills: ['Client Intake', 'Audience Analysis', 'Scope & Deliverables', 'Design Brief', 'Strategy & Goals'] },
   { category: 'Research & Concepting', icon: '◎', skills: ['Moodboarding', 'Competitor Audit', 'Thumbnail Sketching', 'Wireframing', 'Visual Identity Setup'] },
-  { category: 'Execution & Visual Design', icon: '✎', skills: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'AI Generation & Retouching', 'Color Hierarchy', 'Typography & Layout', 'Motion & Reels'] },
+  { category: 'Execution & Visual Design', icon: '✎', skills: ['Adobe Photoshop', 'Illustrator', 'AI Generation & Retouching', 'Color Hierarchy', 'Typography & Layout', 'Motion & Reels'] },
   { category: 'Review, Export & Delivery', icon: '↗', skills: ['Stakeholder Review', 'Revision Tweaks', 'Print Prep (CMYK/Bleed)', 'Digital Exports (PNG/MP4)', 'Source File Packaging', 'Asset Archiving'] },
 ];
 
@@ -32,7 +32,7 @@ const STAGES = [
     glyph: '✎',
     title: 'Execution & Visual Design',
     outcome: 'Crafting polished, high-fidelity layouts, asset retouching, and typography.',
-    tools: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'AI Generation & Retouching', 'Color Hierarchy', 'Typography & Layout', 'Motion & Reels'],
+    tools: ['Adobe Photoshop', 'Illustrator', 'AI Generation & Retouching', 'Color Hierarchy', 'Typography & Layout', 'Motion & Reels'],
   },
   {
     step: 'Ship',

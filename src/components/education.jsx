@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
 import { Award, GraduationCap, BadgeCheck } from 'lucide-react';
+import gcuPhoto from '../assets/images/gcu.jpeg';
+import punjabPhoto from '../assets/images/punjab.jpeg';
+import turkishPhoto from '../assets/images/turkish.jpeg';
+import masterPhoto from '../assets/images/masterpaints.jpeg';
+import floodPhoto from '../assets/images/flood.jpeg';
 import MobileEducation from './MobileEducation';
 import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 
@@ -12,6 +17,7 @@ const education = [
     period: 'June 2019 – July 2023',
     details: 'Major: Data Science, Artificial Intelligence, Data Structures, LLMs',
     subjects: ['Ps', 'Ai', 'Premier Pro', 'Film Making', 'Print Making'],
+    image: gcuPhoto,
   },
   {
     degree: 'Intermediate of Computer Science — ICS',
@@ -20,6 +26,8 @@ const education = [
     period: 'May 2018 – March 2019',
     details: 'Subjects: Computer Science, Maths, Physics',
     subjects: ['Computer Science', 'Mathematics', 'Physics'],
+    image: punjabPhoto,
+    pos: 'center 40%',
   },
 ];
 
@@ -27,16 +35,19 @@ const achievements = [
   {
     title: 'Turkish Print Making Award',
     org: 'AlHamra',
+    image: turkishPhoto,
     desc: 'Earned a distinction award at a 3-day Turkish calligraphic printmaking workshop led by master artists.',
   },
   {
-    title: 'Wall Art Competition',
+    title: 'Master Paints Wall Art Competition',
     org: 'Master Paints',
+    image: masterPhoto,
     desc: 'Competed in a live mural painting competition, turning design concepts into large-scale wall art.',
   },
   {
     title: 'Excellence Award, Pakistan Flood Relief',
     org: 'Al Mustafa Welfare Trust',
+    image: floodPhoto,
     desc: 'Volunteered in Pakistan flood relief, managing logistics and aid distribution for affected families.',
   },
 ];
@@ -62,6 +73,8 @@ const PASSES = [
       year: y[1] || y[0] || '',
       span: y.length > 1 ? `${y[0]} — ${y[1]}` : y[0] || '',
       chips: e.subjects,
+      image: e.image,
+      pos: e.pos,
     };
   }),
   ...achievements.map((a) => ({
@@ -70,6 +83,7 @@ const PASSES = [
     title: a.title,
     issuer: a.org,
     desc: a.desc,
+    image: a.image,
   })),
 ];
 
@@ -193,7 +207,11 @@ function PassShell({ pass, children }) {
         padding: '1.8rem 2rem 1.7rem',
         boxSizing: 'border-box',
         overflow: 'hidden',
-        background: isDegree
+        background: pass.image
+          ? (isDegree
+              ? `linear-gradient(135deg, rgba(38,35,58,0.85) 0%, rgba(52,49,72,0.6) 50%, rgba(38,35,58,0.9) 100%), url(${pass.image}) ${pass.pos || 'center 1%'} / cover no-repeat`
+              : `linear-gradient(135deg, rgba(230,214,180,0.88) 0%, rgba(124,124,124,0.7) 50%, rgba(196,174,128,0.9) 100%), url(${pass.image}) ${pass.pos || 'center 1%'} / cover no-repeat`)
+          : isDegree
           ? `linear-gradient(135deg, #3d3954 0%, ${NAVY} 45%, #26233a 100%)`
           : `linear-gradient(135deg, #e6d6b4 0%, ${GOLD} 50%, #c4ae80 100%)`,
         border: isDegree ? '1px solid rgba(215,196,158,0.28)' : '1px solid rgba(255,255,255,0.35)',

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import alMustafaLogo from '../assets/images/al-mustafa-logo.svg';
+import alMustafaLogo from '../assets/images/al-mustafa-logo.png';
 import irongearLogo from '../assets/images/irongear.png';
 import secondcupLogo from '../assets/images/sc.png';
 import popcornLogo from '../assets/images/pop-corn.jpg';
@@ -20,7 +20,7 @@ const companies = [
   { name: 'Second Cup', logo: secondcupLogo, scale: 2.2, y: 24 },
   { name: 'Pop Corn', logo: popcornLogo },
   { name: 'The Hub', logo: hubLogo },
-  { name: 'Coffee Planet', logo: coffeeLogo, scale: 2.2 },
+  { name: 'Coffee Planet', logo: coffeeLogo, scale: 3.8},
   // { name: 'Duofankaar', logo: duofankaarLogo },
   // { name: 'Samsung', logo: samsungLogo },
 ];

@@ -3,6 +3,8 @@ import { motion, AnimatePresence, useScroll, useTransform, useSpring, cubicBezie
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import MobileExperience from './MobileExperience';
+import irongearBg from '../assets/images/irongear-bg.jpeg';
+import irongearBg2 from '../assets/images/irongear-logo.jpeg';
 import { useIsMobile, useIsDark, SectionLabel } from '../lib/ui';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +35,10 @@ const experiences = [
   {
     role: 'Multimedia Designer',
     company: 'IronGear',
+    image: irongearBg,
+    image2: irongearBg2,
+    pos2: 'center',
+    pos: '100% 5%',
     location: 'Lahore, Pakistan',
     type: 'On-Site · Full Time',
     period: 'Dec 2022 – Jul 2023',
@@ -211,7 +217,9 @@ function ExperienceCard({ exp, index, total, isMobile, cardRef, nextRef, innerRe
           scale: isMobile ? 1 : scale,
           opacity: isMobile ? 1 : opacity,
           borderRadius: isMobile ? 24 : 32,
-          backgroundColor: t.card,
+          background: exp.image
+            ? `linear-gradient(90deg, rgba(38,35,58,0.95) 0%, rgba(52,49,72,0.8) 50%, rgba(38,35,58,0.65) 100%), url(${exp.image}) ${exp.pos || 'center'} / cover no-repeat`
+            : t.card,
           boxShadow: t.shadow,
           padding: isMobile ? '2.25rem 1.5rem' : 'clamp(1.75rem, 4vh, 3rem) clamp(2rem, 4vw, 3.75rem)',
           display: 'grid',
@@ -345,7 +353,9 @@ function ExperienceCard({ exp, index, total, isMobile, cardRef, nextRef, innerRe
           style={{
             position: 'relative',
             zIndex: 1,
-            backgroundColor: t.panel,
+            background: exp.image2
+              ? `linear-gradient(180deg, ${t.panel}E6 0%, ${t.panel}B3 100%), url(${exp.image2}) ${exp.pos2 || 'center'} / cover no-repeat`
+              : t.panel,
             borderRadius: isMobile ? 20 : 24,
             padding: isMobile ? '1.75rem' : 'clamp(1.5rem, 3.5vh, 2.25rem) clamp(1.5rem, 2.5vw, 2.25rem)',
             display: 'flex',
