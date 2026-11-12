@@ -10,7 +10,7 @@ import {
 import { Award, Mic, Rocket } from 'lucide-react';
 
 const EASE = [0.16, 1, 0.3, 1];
-const GOLD = '#D7C49E';
+const GOLD = '#FF4C2B';
 const ACH_ICONS = [Award, Mic, Rocket];
 
 function getColors(isDark) {
@@ -89,7 +89,7 @@ function EducationEditorial({ education, c }) {
       {/* Label */}
       <div ref={headRef}>
         <div className="mono" style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', letterSpacing: '0.15em', color: c.text, marginBottom: 14 }}>
-          <span>05 / EDUCATION</span>
+          <span style={{ color: '#FF4C2B' }}>05 / EDUCATION</span>
           <span style={{ color: c.muted }}>{items.length} QUALIFICATIONS</span>
         </div>
         <Hairline inView={headIn} c={c} />

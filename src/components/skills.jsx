@@ -314,7 +314,7 @@ export default function Skills() {
       ref={sectionRef}
       style={{ position: 'relative', padding: '9vw 6vw 8vw', backgroundColor: t.bg, borderTop: `1px solid ${t.border}` }}
     >
-      <SectionLabel index="04" title="Skills" color="#FF4C2B"accent={t.accent} />
+      <SectionLabel index="04" title="Skills" color="#FF4C2B" accent={t.accent} />
 
       {/* Heading + stats */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '2rem', flexWrap: 'wrap', marginBottom: '3rem' }}>

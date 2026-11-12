@@ -197,7 +197,7 @@ export default function Navbar() {
               backgroundColor: INK,
               color: TEXT,
               borderRadius: open ? 28 : 999,
-              border: '1px solid rgba(215,196,158,0.18)',
+              border: '1px solid #FF4C2B',
               boxShadow: open ? '0 30px 80px rgba(0,0,0,0.45)' : '0 10px 30px rgba(0,0,0,0.25)',
               overflow: 'hidden',
               width: open ? panelWidth : 'auto',

@@ -29,7 +29,7 @@ export default function MobileHero({ t, heroRef, profileImg, bgVideo, taglines, 
 
   // Card colours: card uses the profile background, name contrasts with it
   const cardBg = t.profileBg;
-  const nameColor = isLight ? '#D7C49E' : '#121018';
+const nameColor = '#FFFFFF';
   const muted = isLight ? 'rgba(8,8,8,0.6)' : 'rgba(244,241,234,0.6)';
 
   /* Tagline rotation — first one waits for the preloader */

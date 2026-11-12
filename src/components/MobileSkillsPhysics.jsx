@@ -280,7 +280,7 @@ export default function MobileSkillsPhysics({ skillGroups, theme: t, sectionRef 
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: EASE }}
-        style={{ color: t.text, fontSize: '0.7rem', letterSpacing: '0.15em', display: 'inline-block' }}
+        style={{ color: '#FF4C2B', fontSize: '0.7rem', letterSpacing: '0.15em', display: 'inline-block' }}
       >
         04 / SKILLS
       </motion.span>

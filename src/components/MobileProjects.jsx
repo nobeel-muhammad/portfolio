@@ -28,7 +28,7 @@ function getColors(isDark) {
         border: 'rgba(244,241,234,0.08)',
         text: '#F4F1EA',
         muted: 'rgba(244,241,234,0.6)',
-        accent: '#D7C49E',
+        accent: '#FF4C2B',
         accentText: '#121018',
         chipBg: 'rgba(244,241,234,0.08)',
         sheetBg: '#121018',

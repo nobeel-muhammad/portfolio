@@ -362,7 +362,7 @@ export default function MobileExperience({ experiences, theme: t, sectionRef }) 
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
-          style={{ color: t.label, fontSize: '0.75rem', letterSpacing: '0.15em', display: 'inline-block' }}
+          style={{ color: '#FF4C2B', fontSize: '0.75rem', letterSpacing: '0.15em', display: 'inline-block' }}
         >
           02 / EXPERIENCE
         </motion.span>

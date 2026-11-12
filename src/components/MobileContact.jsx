@@ -252,7 +252,7 @@ export default function MobileContact({ isDark, sectionRef, emailConfig }) {
       {/* Header */}
       <div ref={headRef}>
         <div className="mono" style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', letterSpacing: '0.15em', color: c.text, marginBottom: 14 }}>
-          <span>06 / CONTACT</span>
+          <span style={{ color: '#FF4C2B' }}>06 / CONTACT</span>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: c.muted }}>
             <motion.span
               animate={{ opacity: [1, 0.3, 1] }}
