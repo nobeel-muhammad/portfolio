@@ -153,7 +153,7 @@ export default function About() {
             }}
           >
             <span style={{ color: t.accent }}>Visual Excellence</span><br />
-            <span style={{ WebkitTextStroke: `1.5px ${t.stroke}`, color: 'transparent' }}>at Every Layer</span>
+            <span style={{ WebkitTextStroke: `${isMobile ? 0.8 : 1.5}px ${t.stroke}`, color: 'transparent', fontWeight: isMobile ? 500 : 700 }}>at Every Layer</span>
           </motion.h2>
 
           <motion.p

@@ -11,12 +11,12 @@ import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 
 const education = [
   {
-    degree: 'Bachelors in Graphic Design — BSCS (Honors)',
+    degree: 'Bachelors in Graphic Design — BFA-Graphic Design',
     institution: 'Government College University, Lahore',
     location: 'Lahore, Pakistan',
     period: 'June 2019 – July 2023',
     details: 'Major: Data Science, Artificial Intelligence, Data Structures, LLMs',
-    subjects: ['Ps', 'Ai', 'Premier Pro', 'Film Making', 'Print Making'],
+    subjects: ['Ps', 'Ai', 'Marketing & Management', 'Film Making', 'Print Making'],
     image: gcuPhoto,
   },
   {

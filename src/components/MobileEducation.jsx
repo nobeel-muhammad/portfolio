@@ -100,12 +100,12 @@ function EducationEditorial({ education, c }) {
             {topDeg.short}
             {topDeg.tag && <span style={{ color: GOLD }}> with {topDeg.tag},</span>}
           </Reveal>
-          <Reveal inView={headIn} delay={0.2} style={{ fontSize: 'clamp(1.7rem, 8vw, 2.3rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.12, color: c.muted }}>
-            specialised in AI
+          <Reveal inView={headIn} delay={0.2} style={{ fontSize: 'clamp(1rem, 4.5vw, 1.3rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.12, color: c.muted }}>
+            Specialization in Visual<br /> Communication Design
           </Reveal>
-          <Reveal inView={headIn} delay={0.3} style={{ fontSize: 'clamp(1.7rem, 8vw, 2.3rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.12, color: c.muted }}>
+          {/* <Reveal inView={headIn} delay={0.3} style={{ fontSize: 'clamp(1.7rem, 8vw, 2.3rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.12, color: c.muted }}>
             & Data Science.
-          </Reveal>
+          </Reveal> */}
         </div>
       </div>
 
