@@ -19,8 +19,8 @@ function App() {
 
   // Dark mode removed: always use the light theme and forget any saved choice
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.removeItem('theme')
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem('theme', 'dark')
   }, [])
 
   useEffect(() => {
