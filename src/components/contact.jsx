@@ -265,7 +265,7 @@ const submit = async (e) => {
       <SectionLabel
         index="06"
         title="Contact"
-        color={t.text}
+        color="#FF4C2B"
         accent={t.accent}
         aside={
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>

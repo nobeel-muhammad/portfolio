@@ -135,7 +135,7 @@ export default function About() {
           animate={visible ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <SectionLabel index="01" title="About" color={t.text} accent={t.accent} style={{ marginBottom: 0 }} />
+          <SectionLabel index="01" title="About" color="#FF4C2B" accent={t.accent} style={{ marginBottom: 0 }} />
         </motion.div>
 
         {/* Right content */}

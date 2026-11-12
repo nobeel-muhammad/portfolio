@@ -320,7 +320,7 @@ export default function Education() {
       <SectionLabel
         index="05"
         title="Education"
-        color={t.text}
+        color="#FF4C2B"
         accent={GOLD}
         aside={`${String(education.length).padStart(2, '0')} DEGREES · ${String(achievements.length).padStart(2, '0')} AWARDS`}
       />

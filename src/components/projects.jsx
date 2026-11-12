@@ -491,7 +491,7 @@ export default function Projects() {
         style={{ position: 'relative', padding: '9vw 6vw 8vw', backgroundColor: t.bg, borderTop: `1px solid ${t.sectionBorder}` }}
       >
         {/* Header */}
-        <SectionLabel index="03" title="Projects" color={t.text} accent={t.accent} />
+        <SectionLabel index="03" title="Projects" color="#FF4C2B" accent={t.accent} />
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '2rem', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
           {/* The wrapper is observed (always on screen), so the heading reliably slides up out of its mask */}

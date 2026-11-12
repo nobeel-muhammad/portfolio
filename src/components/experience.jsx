@@ -619,7 +619,7 @@ export default function Experience() {
         }}
       >
         <motion.div style={{ y: labelY }}>
-          <SectionLabel index="02" title="Experience" color={t.label} accent={t.accent} style={{ marginBottom: '1.5rem' }} />
+          <SectionLabel index="02" title="Experience" color="#FF4C2B" accent={t.accent} style={{ marginBottom: '1.5rem' }} />
         </motion.div>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '3rem', flexWrap: 'wrap' }}>
         <div>
