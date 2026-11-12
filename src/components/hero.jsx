@@ -104,7 +104,7 @@ export default function Hero() {
   const isDark = useIsDark();
   const t = isDark
     ? { bg: '#121018', text: '#F4F1EA', strong: '#F4F1EA', stroke: '#F4F1EA', fill: '#F4F1EA', line: '#D7C49E', chipBorder: 'rgba(244,241,234,0.35)', chipHover: '#D7C49E', profileBg: '#D7C49E', btnBg: '#D7C49E', btnText: '#121018', btnHover: '#F4F1EA', muted: 'rgba(244,241,234,0.6)', hair: 'rgba(244,241,234,0.14)' }
-    : { bg: '#7c7c7c', text: '#080808', strong: '#000000', stroke: '#0a0a0a', fill: '#121018', line: '#343148', chipBorder: 'rgba(8,8,8,0.35)', chipHover: '#000000', profileBg: '#343148', btnBg: '#343148', btnText: '#F4F1EA', btnHover: '#000000', muted: 'rgba(8,8,8,0.6)', hair: 'rgba(8,8,8,0.18)' };
+    : { bg: '#080F1B', text: '#F4F1EA', strong: '#FFFFFF', stroke: '#F4F1EA', fill: '#F4F1EA', line: '#FF4C2B', chipBorder: 'rgba(244,241,234,0.35)', chipHover: '#FF4C2B ', profileBg: '#041E42', btnBg: '#FF4C2B', btnText: '#080F1B', btnHover: '#FF4C2B', muted: 'rgba(244,241,234,0.6)', hair: 'rgba(244,241,234,0.14)' };
 
   /* Scroll-linked depth */
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });

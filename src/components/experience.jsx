@@ -36,7 +36,7 @@ const experiences = [
       'Used AI tools to speed up concept creation and visual production',
     ],
     tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
-    accent: '#343148',
+    accent: '#041E42',
   },
   {
     role: 'Multimedia Designer',
@@ -58,7 +58,7 @@ const experiences = [
       'Created social media visuals using Photoshop and Illustrator',
     ],
     tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro', 'Photography', 'Videography'],
-    accent: '#343148',
+    accent: '#041E42',
   },
   {
     role: 'Graphic Designer',
@@ -76,7 +76,7 @@ const experiences = [
       'Built visual assets using Photoshop, Illustrator, and Premiere Pro',
     ],
     tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
-    accent: '#343148',
+    accent: '#041E42',
   },
   {
     role: 'Video Editor & Graphics Designer',
@@ -94,7 +94,7 @@ const experiences = [
       'Built visual assets for channels using Photoshop and Illustrator',
     ],
     tags: ['Photoshop', 'Illustrator', 'Figma', 'Premiere Pro'],
-    accent: '#343148',
+    accent: '#041E42',
   },
 ];
 
@@ -102,8 +102,8 @@ function getTheme(isDark) {
   return isDark
     ? {
         bg: '#121018',
-        border: '#343148',
-        card: '#343148',
+        border: '#041E42',
+        card: '#041E42',
         cardText: '#FFFFFF',
         panel: '#121018',
         panelText: '#F4F1EA',
@@ -116,13 +116,13 @@ function getTheme(isDark) {
     : {
         bg: '#7c7c7c',
         border: '#000000',
-        card: '#343148',
+        card: '#041E42',
         cardText: '#FFFFFF',
         panel: '#7c7c7c',
-        panelText: '#343148',
-        accent: '#343148',
-        number: '#343148',
-        heading: '#343148',
+        panelText: '#041E42',
+        accent: '#041E42',
+        number: '#041E42',
+        heading: '#041E42',
         label: '#000000',
         shadow: '0 -10px 30px rgba(0,0,0,0.12)',
       };

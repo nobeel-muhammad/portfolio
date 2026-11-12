@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence, LayoutGroup, useScroll, useSpring } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
 import { INTRO_DELAY } from './preloader';
 import { useIsMobile, EASE } from '../lib/ui';
 
@@ -247,28 +246,6 @@ export default function Navbar() {
                     </Roll>
                   </span>
 
-                  {/* Theme toggle inside the island (desktop + mobile) */}
-                  {(
-                    <span
-                      style={{
-                        width: 38,
-                        height: 38,
-                        borderRadius: '50%',
-                        backgroundColor: TEXT,
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        overflow: 'hidden',
-                        flexShrink: 0,
-                        marginRight: -6,
-                      }}
-                    >
-                      <span style={{ display: 'inline-flex', transform: 'scale(0.82)' }}>
-                        <ThemeToggle />
-                      </span>
-                    </span>
-                  )}
-
                   <button
                     type="button"
                     onClick={() => setOpen(true)}
@@ -309,26 +286,6 @@ export default function Navbar() {
                       <span className="mono" style={{ color: GOLD, fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.06em' }}>Mr.</span>
                       <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>Muhammad Nabeel</span>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    {/* Theme toggle beside the close button */}
-                    {(
-                      <span
-                        style={{
-                          width: 38,
-                          height: 38,
-                          borderRadius: '50%',
-                          backgroundColor: TEXT,
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          overflow: 'hidden',
-                        }}
-                      >
-                        <span style={{ display: 'inline-flex', transform: 'scale(0.82)' }}>
-                          <ThemeToggle />
-                        </span>
-                      </span>
-                    )}
                     <motion.button
                       type="button"
                       onClick={() => setOpen(false)}
@@ -340,7 +297,6 @@ export default function Navbar() {
                     >
                       <MenuIcon open />
                     </motion.button>
-                    </div>
                   </div>
 
                   {/* Sections */}
@@ -406,7 +362,11 @@ export default function Navbar() {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: 0.45, duration: 0.4 } }}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap', paddingTop: 14 }}
+                    style={
+                      isMobile
+                        ? { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, paddingTop: 14 }
+                        : { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap', paddingTop: 14 }
+                    }
                   >
                     <motion.button
                       type="button"
@@ -426,12 +386,14 @@ export default function Navbar() {
                         letterSpacing: '0.12em',
                         display: 'inline-flex',
                         alignItems: 'center',
+                        justifyContent: 'center',
                         gap: 8,
+                        gridColumn: isMobile ? '1 / -1' : undefined,
                       }}
                     >
                       <Roll k={copied ? 'yes' : 'no'}>{copied ? '✓ EMAIL COPIED' : 'COPY EMAIL'}</Roll>
                     </motion.button>
-                    <span style={{ display: 'inline-flex', gap: 6 }}>
+                    <span style={{ display: isMobile ? 'contents' : 'inline-flex', gap: 6 }}>
                       {SOCIALS.map((s) => (
                         <motion.a
                           key={s.label}
@@ -440,7 +402,7 @@ export default function Navbar() {
                           rel="noopener noreferrer"
                           whileHover={{ backgroundColor: 'rgba(244,241,234,0.14)' }}
                           className="mono"
-                          style={{ height: 40, padding: '0 14px', borderRadius: 999, display: 'inline-flex', alignItems: 'center', fontSize: '0.62rem', letterSpacing: '0.12em', color: TEXT, textDecoration: 'none', backgroundColor: 'rgba(244,241,234,0.06)' }}
+                          style={{ height: 40, padding: '0 14px', borderRadius: 999, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.62rem', letterSpacing: '0.12em', color: TEXT, textDecoration: 'none', backgroundColor: 'rgba(244,241,234,0.06)' }}
                         >
                           {s.label.toUpperCase()}
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 8 }}>

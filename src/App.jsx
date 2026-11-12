@@ -17,6 +17,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 function App() {
   const [isLoading, setIsLoading] = useState(true)
 
+  // Dark mode removed: always use the light theme and forget any saved choice
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.removeItem('theme')
+  }, [])
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.4,

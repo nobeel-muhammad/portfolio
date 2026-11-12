@@ -37,7 +37,7 @@ export default function About() {
   const isDark = useIsDark();
   const t = isDark
     ? { bg: '#121018', border: '#343148', text: '#F4F1EA', accent: '#7c7c7c', stroke: '#F4F1EA' }
-    : { bg: '#7c7c7c', border: '#000000', text: '#000000', accent: '#343148', stroke: '#080808' };
+    : { bg: '#7c7c7c', border: '#000000', text: '#000000', accent: '#041E42', stroke: '#080808' };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
