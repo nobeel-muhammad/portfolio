@@ -103,7 +103,7 @@ function getTheme(isDark) {
     ? {
         bg: '#121018',
         border: '#041E42',
-        card: '#041E42',
+        card: '#343148',
         cardText: '#FFFFFF',
         panel: '#121018',
         panelText: '#F4F1EA',
@@ -116,7 +116,7 @@ function getTheme(isDark) {
     : {
         bg: '#7c7c7c',
         border: '#000000',
-        card: '#041E42',
+        card: '#343148',
         cardText: '#FFFFFF',
         panel: '#7c7c7c',
         panelText: '#041E42',
