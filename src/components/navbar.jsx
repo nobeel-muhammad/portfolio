@@ -6,10 +6,10 @@ import { useIsMobile, EASE } from '../lib/ui';
 /* ---- Edit here ---- */
 const SECTIONS = [
   { id: 'about', label: 'About', note: 'Who I am' },
-  { id: 'experience', label: 'Experience', note: '4 roles · ~3 yrs' },
+  { id: 'experience', label: 'Experience', note: '4 roles · 5 yrs' },
   { id: 'projects', label: 'Projects', note: 'Selected work' },
   { id: 'skills', label: 'Skills', note: '28 tools' },
-  { id: 'education', label: 'Education', note: 'BSCS · Honors' },
+  { id: 'education', label: 'Education', note: 'BFA · Grpahic Design' },
   { id: 'contact', label: 'Contact', note: "Let's talk" },
 ];
 const EMAIL = 'nabeelmuhammad021@gmail.com';
@@ -293,7 +293,7 @@ export default function Navbar() {
                       autoFocus
                       whileHover={!isMobile ? { rotate: 90 } : undefined}
                       transition={{ duration: 0.45, ease: EASE }}
-                      style={{ width: 38, height: 38, borderRadius: '50%', border: 'none', cursor: 'pointer', backgroundColor: 'rgba(244,241,234,0.08)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                      style={{ width: 38, height: 38, borderRadius: '50%', border: '1px solid #FFFFFF', outline: 'none', cursor: 'pointer', backgroundColor: 'rgba(244,241,234,0.08)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                     >
                       <MenuIcon open />
                     </motion.button>

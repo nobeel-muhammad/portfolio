@@ -53,7 +53,7 @@ function App() {
   }, [])
 
   return (
-    <div className="relative min-h-screen bg-[#EDEBE6]">
+    <div className="relative min-h-screen bg-[#121018]">
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       <CursorMagnetic />
       <Scroll />

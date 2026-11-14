@@ -465,7 +465,7 @@ export default function MobileExperience({ experiences, theme: t, sectionRef }) 
       {/* Progress bar + dots */}
       <div style={{ padding: '0 5vw' }}>
         <div style={{ height: 2, backgroundColor: `${t.heading}33`, borderRadius: 2, overflow: 'hidden' }}>
-          <motion.div style={{ height: '100%', backgroundColor: t.heading, scaleX: progress, transformOrigin: 'left' }} />
+          <motion.div style={{ height: '100%', backgroundColor: '#FF6B1A', scaleX: progress, transformOrigin: 'left' }} />
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: '1.1rem' }}>
           {experiences.map((exp, i) => (
@@ -479,7 +479,7 @@ export default function MobileExperience({ experiences, theme: t, sectionRef }) 
               <motion.span
                 animate={{ width: i === active ? 22 : 7, opacity: i === active ? 1 : 0.4 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                style={{ display: 'block', height: 7, borderRadius: 999, backgroundColor: t.heading }}
+                style={{ display: 'block', height: 7, borderRadius: 999, backgroundColor: '#FF6B1A' }}
               />
             </button>
           ))}

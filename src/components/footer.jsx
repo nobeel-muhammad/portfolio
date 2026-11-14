@@ -38,7 +38,7 @@ const LINKS = [
   },
 ];
 
-const GOLD = '#7c7c7c';
+const GOLD = '#FF6B1A';
 
 function getTheme(isDark) {
   return isDark
@@ -112,7 +112,7 @@ function SocialLinks({ t }) {
           aria-label={l.label}
           title={l.label}
           initial={false}
-          whileHover={{ y: -3, backgroundColor: t.hover, color: t.hoverText, borderColor: t.hover }}
+          whileHover={{ y: -3, backgroundColor: '#FF6B1A', color: '#121018', borderColor: '#FF6B1A' }}
           whileTap={{ scale: 0.94 }}
           transition={{ duration: 0.25, ease: EASE }}
           style={{

@@ -7,8 +7,8 @@ import aiDocProcessing from '../assets/images/ecom.jpeg';
 import invoiceAutomation from '../assets/images/wings.jpeg';
 import aiCallingAgent from '../assets/images/sc.jpg';
 import futureMineralForum from '../assets/images/igg.png';
-import sadiaChicken from '../assets/images/SadiaChicken.png';
-import hybrdx from '../assets/images/hybrdx.jpg';
+import sadiaChicken from '../assets/images/igg.png';
+import hybrdx from '../assets/images/fl.jpeg';
 import cboj from '../assets/images/CBOJ.jpg';
 import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 
@@ -17,6 +17,7 @@ const projects = [
     number: '01',
     title: 'Ecom Force',
     fill: true,
+    zoom: 1.2,
     stack: ['Photoshop', 'Illustrator', 'AI'],
     description: 'Designed a bold brand identity for ECOM FORCE, a full-service e-commerce marketing agency. Created the logo, color palette, typography, and brand assets that reflect its growth-driven, results-focused approach across digital channels.',
     tag: 'Brand Identity',
@@ -26,6 +27,8 @@ const projects = [
   {
     number: '02',
     title: 'Wings',
+    pad: '0',
+    zoom: 1.3,
     stack: ['Photoshop', 'Illustrator', 'AI'],
     description: 'Designed a friendly visual identity for Wings, an online store for bird lovers. Created the logo, color palette, and brand assets that capture joy, care, and companionship for pet birds and their owners.',
     tag: 'Brand Identity',
@@ -44,6 +47,7 @@ const projects = [
   {
     number: '04',
     title: 'Irongear Fitness',
+    zoom: 0.85,
     stack: ['Photoshop', 'Illustrator', 'AI'],
     description: 'Designed bold social media posts for IronGear, a fitness gear brand. Created eye-catching visuals, product promos, and campaign graphics that keep the brand consistent and boost engagement across Instagram and Facebook.',
     tag: 'Social Media',
@@ -52,23 +56,24 @@ const projects = [
   },
   {
     number: '05',
-    title: 'HYBRDX - Shamal Group',
-    stack: ['Photoshop', 'Illustrator', 'AI'],
+    title: 'Famous Life',
+    fill: true,
+    stack: ['Photoshop', 'Illustrator'],
     description: "Contributed to the front-end of a public-facing campaign site for Dubai's hybrid fitness competition. Built responsive layouts, animations and a live event countdown, and designed the Mailchimp emailer for participant updates.",
-    tag: 'FRONTEND / WEB',
+    tag: 'Thumbnail',
     image: hybrdx,
     bgColor: '#06313e',
-    link: 'https://www.hybrdx.ae/',
   },
   {
     number: '06',
-    title: 'Sadia Chicken',
-    stack: ['Photoshop', 'Illustrator', 'AI'],
+    title: 'Irongear Fitness',
+    zoom: 0.85,
+    stack: ['Photoshop', 'Premiere Pro'],
     description: 'Developed and maintained a responsive front-end, ensuring a consistent user experience across desktop, tablet, and mobile devices.',
-    tag: 'FRONTEND / WEB',
+    tag: 'Text Animation',
     image: sadiaChicken,
-    bgColor: '#FFCD00',
-    link: 'https://www.sadia-life.com/en/',
+    bgColor: '#ffffff',
+    link: 'https://www.behance.net/gallery/173187479/Irongear-Fitness-Social-Media-Posts',
   },
   {
     number: '07',
@@ -177,7 +182,7 @@ function ProjectRow({ project, active, onActivate, registerRef, t }) {
           {project.link && (
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, color: t.muted }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3ddc84' }} />
-              LIVE
+              2026
             </span>
           )}
         </span>
@@ -247,10 +252,10 @@ function PreviewPanel({ project, index, total, t }) {
             <motion.img
               src={project.image}
               alt={project.title}
-              initial={{ scale: 1.15 }}
-              animate={{ scale: 1 }}
+              initial={{ scale: (project.zoom || 1) * 1.15 }}
+              animate={{ scale: project.zoom || 1 }}
               transition={{ duration: 1.1, ease: EASE }}
-              style={{ width: '100%', height: '100%', objectFit: project.fill ? 'cover' : 'contain', padding: project.fill ? 0 : '2.25rem' }}
+              style={{ width: '100%', height: '100%', objectFit: project.fill ? 'cover' : 'contain', padding: project.fill ? 0 : project.pad || '2.25rem' }}
             />
           </motion.div>
         </AnimatePresence>

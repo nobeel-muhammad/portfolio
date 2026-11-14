@@ -181,10 +181,10 @@ export default function CursorMagnetic() {
       const key = `${mode}-${onNavy}`;
       if (key === colorKey) return;
       colorKey = key;
-      const fg = onNavy ? GOLD : NAVY;
+      const fg = '#4AA0EB';
       dot.style.backgroundColor = fg;
       tag.style.backgroundColor = fg;
-      tag.style.color = onNavy ? NAVY : GOLD;
+      tag.style.color = '#FFFFFF';
     };
 
     const updateMoving = (map, active, compute, write) => {
@@ -337,7 +337,7 @@ export default function CursorMagnetic() {
           width: DOT,
           height: DOT,
           borderRadius: DOT / 2,
-          backgroundColor: NAVY,
+          backgroundColor: '#4aa0eb',
           pointerEvents: 'none',
           zIndex: 9999,
           opacity: 0,
@@ -354,8 +354,8 @@ export default function CursorMagnetic() {
           left: 0,
           padding: '5px 10px',
           borderRadius: 999,
-          backgroundColor: NAVY,
-          color: GOLD,
+          backgroundColor: '#4AA0EB',
+          color: '#FFFFFF',
           fontFamily: "'JetBrains Mono', 'Courier New', monospace",
           fontSize: 11,
           letterSpacing: '0.08em',
