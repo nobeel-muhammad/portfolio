@@ -13,12 +13,44 @@ const EASE = [0.22, 1, 0.36, 1];
 
 const FILTERS = [
   { key: 'ALL', label: 'All' },
-  { key: 'AI', label: 'AI' },
-  { key: 'RPA', label: 'RPA' },
-  { key: 'FRONTEND', label: 'Web' },
+  { key: 'Brand Identity', label: 'Brand Identity' },
+  { key: 'Social Media', label: 'Social Media' },
+  { key: 'Thumbnail', label: 'Thumbnail' },
+  { key: 'Text Animation', label: 'Text Animation' },
+  { key: 'Brand Book', label: 'Brand Book' },
+  { key: 'Logo Design', label: 'Logo Design' },
+  { key: 'Wedding Card', label: 'Wedding Card' },
+   
 ];
 
 const categoryOf = (p) => p.tag.split('/')[0].trim();
+
+/* Slides the tapped filter to the middle of the bar so the next ones show */
+function centerTab(btn) {
+  const bar = btn.parentElement;
+  if (!bar) return;
+  const barRect = bar.getBoundingClientRect();
+  const btnRect = btn.getBoundingClientRect();
+  const left = bar.scrollLeft + (btnRect.left - barRect.left) - (barRect.width - btnRect.width) / 2;
+  const max = bar.scrollWidth - bar.clientWidth;
+  const to = Math.max(0, Math.min(left, max));
+  const from = bar.scrollLeft;
+  const dist = to - from;
+  if (Math.abs(dist) < 1) return;
+
+  cancelAnimationFrame(bar._tabRaf);
+  const duration = 550;
+  const easeOut = (t) => 1 - Math.pow(1 - t, 4);
+  const start = performance.now();
+
+  const step = (now) => {
+    const p = Math.min(1, (now - start) / duration);
+    bar.scrollLeft = from + dist * easeOut(p);
+    if (p < 1) bar._tabRaf = requestAnimationFrame(step);
+  };
+  bar._tabRaf = requestAnimationFrame(step);
+}
+
 
 function getColors(isDark) {
   return isDark
@@ -537,7 +569,7 @@ export default function MobileProjects({ projects, isDark, sectionRef }) {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            style={{ display: 'flex', gap: 6, padding: '0 6px', marginTop: 14 }}
+            style={{ display: 'none' }}
           >
             {FILTERS.map((f) => (
               <div key={f.key} style={{ flex: 1, display: 'flex', justifyContent: 'center', height: 2 }}>
@@ -561,6 +593,8 @@ export default function MobileProjects({ projects, isDark, sectionRef }) {
               gap: 6,
               padding: 5,
               borderRadius: 999,
+              overflowX: 'auto',
+              scrollbarWidth: 'none',
               backgroundColor: c.chipBg,
               border: `1px solid ${c.border}`,
               marginBottom: '1.75rem',
@@ -572,11 +606,15 @@ export default function MobileProjects({ projects, isDark, sectionRef }) {
                 <button
                   key={f.key}
                   type="button"
-                  onClick={() => setFilter(f.key)}
+                  onClick={(e) => {
+                    setFilter(f.key);
+                    centerTab(e.currentTarget);
+                  }}
                   style={{
                     position: 'relative',
-                    flex: 1,
-                    padding: '9px 0',
+                    flex: '0 0 auto',
+                    padding: '9px 16px',
+                    whiteSpace: 'nowrap',
                     border: 'none',
                     background: 'transparent',
                     borderRadius: 999,

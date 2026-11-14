@@ -147,7 +147,18 @@ const nameColor = '#FFFFFF';
                 initial={{ y: '100%' }}
                 animate={{ y: '0%' }}
                 transition={{ delay: D + 0.15, duration: 1, ease: EASE }}
-                style={{ ...nameStyle, x: line1X, fontSize: '16vw' }}
+                style={{
+  fontFamily: "'Space Grotesk', sans-serif",
+  fontWeight: 800,
+  fontSize: '7vw',
+  lineHeight: 0.9,
+  letterSpacing: '0.2em',
+  marginRight: '-0.2em',
+  color: '#FF6B1A',
+  whiteSpace: 'nowrap',
+  userSelect: 'none',
+  x: line1X,
+}}
               >
                 {FIRST.toUpperCase()}
               </motion.div>

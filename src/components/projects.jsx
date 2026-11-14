@@ -15,45 +15,44 @@ import { useIsMobile, useIsDark, SectionLabel, EASE } from '../lib/ui';
 const projects = [
   {
     number: '01',
-    title: 'AI-Powered Document Processing System',
-    stack: ['n8n', 'OpenAI', 'Pinecone', 'Vector Search'],
-    description: 'End-to-end n8n workflow integrated with OpenAI and Pinecone to intelligently process and analyze documents. Implemented vector-based semantic search that reduced manual document review time by 70%.',
-    tag: 'AI / AUTOMATION',
+    title: 'Ecom Force',
+    stack: ['Photoshop', 'Illustrator', 'AI'],
+    description: 'Designed a bold brand identity for ECOM FORCE, a full-service e-commerce marketing agency. Created the logo, color palette, typography, and brand assets that reflect its growth-driven, results-focused approach across digital channels.',
+    tag: 'Brand Identity',
     image: aiDocProcessing,
     bgColor: '#ffffff',
   },
   {
     number: '02',
-    title: 'Invoice Processing Automation',
-    stack: ['UiPath', 'SharePoint', 'Outlook', 'OCR'],
-    description: 'RPA solution that automatically retrieves invoice PDFs and client signatures from Outlook, merges documents, embeds digital signatures, and archives to SharePoint. Saved 10+ hours of manual work per week.',
-    tag: 'RPA / ENTERPRISE',
+    title: 'Wings',
+    stack: ['Photoshop', 'Illustrator', 'AI'],
+    description: 'Designed a friendly visual identity for Wings, an online store for bird lovers. Created the logo, color palette, and brand assets that capture joy, care, and companionship for pet birds and their owners.',
+    tag: 'Brand Identity',
     image: invoiceAutomation,
     bgColor: '#FBF4EC',
   },
   {
     number: '03',
-    title: 'AI Calling Agent for Customer Support',
-    stack: ['n8n', 'Twilio', 'ElevenLabs', 'LLM'],
-    description: 'AI-powered voice calling agent integrated with Twilio for call automation and ElevenLabs for natural voice synthesis, enabling autonomous handling and resolution of customer queries.',
-    tag: 'AI / VOICE',
+    title: 'Second Cup',
+    stack: ['Photoshop', 'Illustrator', 'AI'],
+    description: 'Designed warm, inviting social media posts for Second Cup, a specialty coffee café brand. Created menu promos, seasonal campaigns, and product visuals that capture the cozy coffeehouse feel and drive engagement online.',
+    tag: 'Social Media',
     image: aiCallingAgent,
     bgColor: '#ffffff',
   },
   {
     number: '04',
-    title: 'Future Mineral Forum - UI',
-    stack: ['React.js', 'HTML', 'CSS', 'JavaScript'],
-    description: 'Built and maintained a responsive front-end website including reusable UI components. Diagnosed and resolved cross-device UI/UX inconsistencies based on visual QA review and feedback.',
-    tag: 'FRONTEND / WEB',
+    title: 'Irongear Fitness',
+    stack: ['Photoshop', 'Illustrator', 'AI'],
+    description: 'Designed bold social media posts for IronGear, a fitness gear brand. Created eye-catching visuals, product promos, and campaign graphics that keep the brand consistent and boost engagement across Instagram and Facebook.',
+    tag: 'Social Media',
     image: futureMineralForum,
     bgColor: '#000000',
-    link: 'https://www.futuremineralsforum.com/',
   },
   {
     number: '05',
     title: 'HYBRDX - Shamal Group',
-    stack: ['JavaScript', 'HTML', 'CSS', 'Mailchimp'],
+    stack: ['Photoshop', 'Illustrator', 'AI'],
     description: "Contributed to the front-end of a public-facing campaign site for Dubai's hybrid fitness competition. Built responsive layouts, animations and a live event countdown, and designed the Mailchimp emailer for participant updates.",
     tag: 'FRONTEND / WEB',
     image: hybrdx,
@@ -63,7 +62,7 @@ const projects = [
   {
     number: '06',
     title: 'Sadia Chicken',
-    stack: ['React.js', 'HTML', 'CSS', 'JavaScript'],
+    stack: ['Photoshop', 'Illustrator', 'AI'],
     description: 'Developed and maintained a responsive front-end, ensuring a consistent user experience across desktop, tablet, and mobile devices.',
     tag: 'FRONTEND / WEB',
     image: sadiaChicken,
@@ -73,7 +72,7 @@ const projects = [
   {
     number: '07',
     title: 'CBOJ',
-    stack: ['React.js', 'HTML', 'C#', 'JavaScript'],
+    stack: ['Photoshop', 'Illustrator', 'AI'],
     description: 'Implemented responsive user interfaces using C#, ensuring consistent functionality and an optimized experience across desktop and mobile devices.',
     tag: 'FRONTEND / WEB',
     image: cboj,
@@ -83,9 +82,15 @@ const projects = [
 
 const FILTERS = [
   { key: 'ALL', label: 'All' },
-  { key: 'AI', label: 'AI' },
-  { key: 'RPA', label: 'RPA' },
-  { key: 'FRONTEND', label: 'Web' },
+  { key: 'Brand Identity', label: 'Brand Identity' },
+  { key: 'Social Media', label: 'Social Media' },
+  { key: 'Thumbnail', label: 'Thumbnail' },
+  { key: 'Text Animation', label: 'Text Animation' },
+  { key: 'Brand Book', label: 'Brand Book' },
+  { key: 'Text Animation', label: 'Text Animation' },
+  { key: 'Logo Design', label: 'Logo Design' },
+  { key: 'Wedding Card', label: 'Wedding Card' },
+   
 ];
 const categoryOf = (p) => p.tag.split('/')[0].trim();
 const isMetric = (w) => /\d/.test(w);
@@ -158,7 +163,7 @@ function ProjectRow({ project, active, onActivate, registerRef, t }) {
         aria-hidden
         animate={{ scaleY: active ? 1 : 0, opacity: active ? 1 : 0 }}
         transition={{ duration: 0.45, ease: EASE }}
-        style={{ position: 'absolute', left: 0, top: '1.9rem', bottom: '1.9rem', width: 3, borderRadius: 3, backgroundColor: t.accent, transformOrigin: 'top' }}
+        style={{ position: 'absolute', left: 0, top: '1.9rem', bottom: '1.9rem', width: 3, borderRadius: 3, backgroundColor: '#FF4C2B', transformOrigin: 'top' }}
       />
 
       <span className="mono" style={{ fontSize: '0.75rem', color: active ? t.accent : t.faint, paddingTop: '0.55rem', transition: 'color 0.3s' }}>
@@ -338,8 +343,8 @@ function PreviewPanel({ project, index, total, t }) {
                     gap: 8,
                     padding: '11px 18px',
                     borderRadius: 999,
-                    backgroundColor: t.accent,
-                    color: t.accentText,
+                    backgroundColor: '#FF4C2B',
+                    color: '#000000',
                     fontSize: '0.82rem',
                     fontWeight: 700,
                     textDecoration: 'none',
@@ -534,7 +539,7 @@ export default function Projects() {
                       <motion.span
                         layoutId="projects-desktop-pill"
                         transition={{ type: 'spring', stiffness: 420, damping: 34 }}
-                        style={{ position: 'absolute', inset: 0, borderRadius: 999, backgroundColor: t.accent }}
+                        style={{ position: 'absolute', inset: 0, borderRadius: 999, backgroundColor: '#FF4C2B' }}
                       />
                     )}
                     <span style={{ position: 'relative' }}>

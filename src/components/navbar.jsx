@@ -379,7 +379,7 @@ export default function Navbar() {
                         borderRadius: 999,
                         border: 'none',
                         cursor: 'pointer',
-                        backgroundColor: GOLD,
+                        backgroundColor: '#fbf5e9',
                         color: INK,
                         fontSize: '0.64rem',
                         fontWeight: 700,

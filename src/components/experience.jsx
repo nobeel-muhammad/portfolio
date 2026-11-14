@@ -7,6 +7,10 @@ import irongearBg from '../assets/images/irongear-bg.jpeg';
 import irongearBg2 from '../assets/images/irongear-logo.jpeg';
 import almustafaBg from '../assets/images/almustafa-bg.jpeg';
 import almustafaBg2 from '../assets/images/almustafa-logoo.jpeg';
+import zigzagBg2 from '../assets/images/zigzag-bg.jpeg';
+import zigzagBg from '../assets/images/zigzag-logo.jpeg';
+import flickBg from '../assets/images/flick-bg.jpeg';
+import flickBg2 from '../assets/images/flick-logo.jpeg';
 import { useIsMobile, useIsDark, SectionLabel } from '../lib/ui';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -63,6 +67,10 @@ const experiences = [
   {
     role: 'Graphic Designer',
     company: 'Zigzag Media',
+    image: zigzagBg,
+    image2: zigzagBg2,
+    pos: 'center 20%',
+    pos2: 'center',
     location: 'Lahore, Pakistan',
     type: 'On-Site · Full Time',
     period: 'Dec 2021 – Nov 2022',
@@ -81,6 +89,11 @@ const experiences = [
   {
     role: 'Video Editor & Graphics Designer',
     company: 'Flick Media Art',
+    image: flickBg,
+    image2: flickBg2,
+    pos: 'center',
+    size: '60%',
+    pos2: 'center',
     location: 'Lahore, Pakistan',
     type: 'On-Site · Part Time',
     period: 'Jun 2021 – Dec 2021',
@@ -224,7 +237,7 @@ function ExperienceCard({ exp, index, total, isMobile, cardRef, nextRef, innerRe
           opacity: isMobile ? 1 : opacity,
           borderRadius: isMobile ? 24 : 32,
           background: exp.image
-            ? `linear-gradient(90deg, rgba(38,35,58,0.97) 0%, rgba(38,35,58,0.9) 50%, rgba(38,35,58,0.85) 100%), url(${exp.image}) ${exp.pos || 'center'} / cover no-repeat`
+            ? `linear-gradient(90deg, rgba(38,35,58,0.97) 0%, rgba(38,35,58,0.9) 50%, rgba(38,35,58,0.85) 100%), url(${exp.image}) ${exp.pos || 'center'} / ${exp.size || 'cover'} no-repeat ${t.card}`
             : t.card,
           boxShadow: t.shadow,
           padding: isMobile ? '2.25rem 1.5rem' : 'clamp(1.75rem, 4vh, 3rem) clamp(2rem, 4vw, 3.75rem)',
