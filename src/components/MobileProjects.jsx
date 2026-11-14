@@ -134,7 +134,7 @@ function ProjectCard({ project, onOpen, c }) {
             style={{
               position: 'absolute',
               inset: 0,
-              backgroundColor: project.bgColor || '#000',
+              background: project.bgColor || '#000',
               overflow: 'hidden',
             }}
           >
@@ -144,7 +144,7 @@ function ProjectCard({ project, onOpen, c }) {
               initial={{ scale: 1.3 }}
               animate={{ scale: inView ? 1 : 1.3 }}
               transition={{ duration: 1.1, ease: EASE }}
-              style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 24 }}
+              style={{ width: '100%', height: '100%', objectFit: project.fill ? 'cover' : 'contain', padding: project.fill ? 0 : 24 }}
             />
           </motion.div>
 
@@ -339,7 +339,7 @@ function ProjectDetail({ project, onClose, c }) {
           style={{
             position: 'relative',
             height: '46vh',
-            backgroundColor: project.bgColor || '#000',
+            background: project.bgColor || '#000',
             overflow: 'hidden',
             borderRadius: 0,
             touchAction: 'none',
@@ -351,7 +351,7 @@ function ProjectDetail({ project, onClose, c }) {
             initial={{ scale: 1.08 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, ease: EASE }}
-            style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '3.5rem 2rem 2rem' }}
+            style={{ width: '100%', height: '100%', objectFit: project.fill ? 'cover' : 'contain', padding: project.fill ? 0 : '3.5rem 2rem 2rem' }}
           />
 
           <motion.div

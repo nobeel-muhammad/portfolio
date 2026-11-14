@@ -18,6 +18,21 @@ const TIMEZONE = 'Asia/Karachi';
 const TZ_OFFSET_HOURS = 5;
 const RESPONSE_TIME = 'Replies within 24 hours';
 const WHATSAPP_TEXT = 'Hi! I came across your portfolio and would like to connect.';
+
+const GmailIcon = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    <defs>
+      <linearGradient id="gmailGrad" gradientUnits="userSpaceOnUse" x1="2" y1="12" x2="22" y2="12">
+        <stop offset="0" stopColor="#EA4335" />
+        <stop offset="0.35" stopColor="#FBBC04" />
+        <stop offset="0.65" stopColor="#34A853" />
+        <stop offset="1" stopColor="#4285F4" />
+      </linearGradient>
+    </defs>
+    <rect x="2" y="4" width="20" height="16" rx="2" stroke="url(#gmailGrad)" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" stroke="url(#gmailGrad)" />
+  </svg>
+);
 const TOPICS = ['Full-time role', 'Freelance project', 'Collaboration', 'Just saying hi'];
 
 const PANEL = '#1d1a28';
@@ -38,7 +53,7 @@ function useLocalTime() {
     const id = setInterval(() => setNow(new Date()), 15000);
     return () => clearInterval(id);
   }, []);
-  const time = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: TIMEZONE }).format(now);
+  const time = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', hour12: true, timeZone: TIMEZONE }).format(now);
   const hour = Number(new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: TIMEZONE }).format(now));
   const diff = TZ_OFFSET_HOURS - -now.getTimezoneOffset() / 60;
   const diffText = diff === 0 ? '' : `${Math.abs(diff)}h ${diff > 0 ? 'ahead of' : 'behind'} you`;
@@ -127,7 +142,7 @@ function Field({ label, value, onChange, type = 'text', multiline, error, autoCo
 }
 
 /* Quick action row (left column) */
-function ActionRow({ href, icon, label, value, onClick, t, delay, inView, primary }) {
+function ActionRow({ href, icon, label, value, onClick, t, delay, inView, primary, light, blue }) {
   const external = href?.startsWith('http');
   return (
     <motion.a
@@ -159,8 +174,8 @@ function ActionRow({ href, icon, label, value, onClick, t, delay, inView, primar
           borderRadius: 12,
           display: 'grid',
           placeItems: 'center',
-          backgroundColor: primary ? t.accent : t.tile,
-          color: primary ? t.bg : t.tileText,
+          backgroundColor: primary ? '#25D366' : blue ? '#4285F4' : light ? '#FFFFFF' : t.tile,
+          color: primary ? '#FFFFFF' : blue ? '#FFFFFF' : light ? '#111111' : t.tileText,
         }}
       >
         {icon}
@@ -331,14 +346,14 @@ const submit = async (e) => {
             <ActionRow href={waHref} icon={<MessageCircle size={19} />} label="WHATSAPP · FASTEST" value="Message me directly" t={t} delay={0.55} inView={headIn} primary />
             <ActionRow
               href={`mailto:${EMAIL}`}
-              icon={<Mail size={19} />}
+              icon={<GmailIcon size={19} />} light
               label="EMAIL"
               value={EMAIL}
               t={t}
               delay={0.62}
               inView={headIn}
             />
-            <ActionRow href={`tel:+${PHONE_RAW}`} icon={<Phone size={19} />} label="CALL" value={PHONE_DISPLAY} t={t} delay={0.69} inView={headIn} />
+            <ActionRow href={`tel:+${PHONE_RAW}`} icon={<Phone size={19} />} blue label="CALL" value={PHONE_DISPLAY} t={t} delay={0.69} inView={headIn} />
           </div>
 
           <motion.button

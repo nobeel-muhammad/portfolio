@@ -3,10 +3,10 @@ import { motion, AnimatePresence, LayoutGroup, useScroll, useMotionValue, useMot
 import { ArrowUpRight, Lock } from 'lucide-react';
 import MobileProjects from './MobileProjects';
 
-import aiDocProcessing from '../assets/images/AIDocumentProcessingWorkflow.png';
-import invoiceAutomation from '../assets/images/AutomatedInvoiceProcessingWorkflow.png';
-import aiCallingAgent from '../assets/images/AIVoiceCallingAgentPipeline.png';
-import futureMineralForum from '../assets/images/FutureMineralForum.png';
+import aiDocProcessing from '../assets/images/ecom.jpeg';
+import invoiceAutomation from '../assets/images/wings.jpeg';
+import aiCallingAgent from '../assets/images/sc.jpg';
+import futureMineralForum from '../assets/images/igg.png';
 import sadiaChicken from '../assets/images/SadiaChicken.png';
 import hybrdx from '../assets/images/hybrdx.jpg';
 import cboj from '../assets/images/CBOJ.jpg';
@@ -16,11 +16,12 @@ const projects = [
   {
     number: '01',
     title: 'Ecom Force',
+    fill: true,
     stack: ['Photoshop', 'Illustrator', 'AI'],
     description: 'Designed a bold brand identity for ECOM FORCE, a full-service e-commerce marketing agency. Created the logo, color palette, typography, and brand assets that reflect its growth-driven, results-focused approach across digital channels.',
     tag: 'Brand Identity',
     image: aiDocProcessing,
-    bgColor: '#ffffff',
+    bgColor: 'linear-gradient(135deg, #030F43 0%, #1B1C85 55%, #A61EF0 100%)',
   },
   {
     number: '02',
@@ -29,7 +30,7 @@ const projects = [
     description: 'Designed a friendly visual identity for Wings, an online store for bird lovers. Created the logo, color palette, and brand assets that capture joy, care, and companionship for pet birds and their owners.',
     tag: 'Brand Identity',
     image: invoiceAutomation,
-    bgColor: '#FBF4EC',
+    bgColor: '#dceff3',
   },
   {
     number: '03',
@@ -47,7 +48,7 @@ const projects = [
     description: 'Designed bold social media posts for IronGear, a fitness gear brand. Created eye-catching visuals, product promos, and campaign graphics that keep the brand consistent and boost engagement across Instagram and Facebook.',
     tag: 'Social Media',
     image: futureMineralForum,
-    bgColor: '#000000',
+    bgColor: '#ffffff',
   },
   {
     number: '05',
@@ -241,7 +242,7 @@ function PreviewPanel({ project, index, total, t }) {
             animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
             exit={{ opacity: 0.6, transition: { duration: 0.6 } }}
             transition={{ duration: 0.75, ease: EASE }}
-            style={{ position: 'absolute', inset: 0, backgroundColor: project.bgColor || '#000' }}
+            style={{ position: 'absolute', inset: 0, background: project.bgColor || '#000' }}
           >
             <motion.img
               src={project.image}
@@ -249,7 +250,7 @@ function PreviewPanel({ project, index, total, t }) {
               initial={{ scale: 1.15 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.1, ease: EASE }}
-              style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '2.25rem' }}
+              style={{ width: '100%', height: '100%', objectFit: project.fill ? 'cover' : 'contain', padding: project.fill ? 0 : '2.25rem' }}
             />
           </motion.div>
         </AnimatePresence>

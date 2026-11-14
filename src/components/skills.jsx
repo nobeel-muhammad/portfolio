@@ -73,7 +73,7 @@ function getTheme(isDark) {
         canvasBorder: '#2a2739',
         dots: 'rgba(244,241,234,0.07)',
         wire: 'rgba(244,241,234,0.12)',
-        wireOn: GOLD,
+        wireOn: '#FF6B1A',
         node: NAVY,
         terminal: '#232032',
         // kept for MobileSkillsPhysics
@@ -96,7 +96,7 @@ function getTheme(isDark) {
         canvasBorder: 'rgba(52,49,72,0.22)',
         dots: 'rgba(52,49,72,0.16)',
         wire: 'rgba(52,49,72,0.2)',
-        wireOn: NAVY,
+        wireOn: '#FF6B1A',
         node: NAVY,
         terminal: '#F4F1EA',
         hoverBorder: NAVY,
@@ -125,10 +125,10 @@ function Terminal({ label, sub, done, nodeRef, t, isDark }) {
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: t.terminal,
-          border: `1.5px solid ${done ? t.wireOn : t.wire}`,
+          border: `1.5px solid ${done ? '#FF6B1A' : t.wire}`,
           color: isDark ? GOLD : NAVY,
           fontSize: '1.3rem',
-          boxShadow: done ? `0 0 0 6px ${isDark ? 'rgba(215,196,158,0.12)' : 'rgba(52,49,72,0.12)'}` : 'none',
+          boxShadow: done ? '0 0 0 6px rgba(255,107,26,0.15)' : 'none',
           transition: 'border-color 0.4s, box-shadow 0.4s',
         }}
       >
@@ -141,7 +141,7 @@ function Terminal({ label, sub, done, nodeRef, t, isDark }) {
   );
 }
 
-function StageNode({ stage, index, done, running, dim, dimOpacity, onEnter, onLeave, nodeRef }) {
+function StageNode({ stage, index, done, running, dim, dimOpacity, onEnter, onLeave, nodeRef, isHovered }) {
   return (
     <motion.div
       ref={nodeRef}
@@ -155,8 +155,12 @@ function StageNode({ stage, index, done, running, dim, dimOpacity, onEnter, onLe
         backgroundColor: NAVY,
         color: '#F4F1EA',
         borderRadius: 18,
-        border: `1.5px solid ${running || done ? GOLD : 'rgba(244,241,234,0.12)'}`,
-        boxShadow: running ? '0 0 0 6px rgba(215,196,158,0.18), 0 24px 50px rgba(0,0,0,0.35)' : '0 18px 40px rgba(0,0,0,0.25)',
+        border: `1.5px solid ${isHovered ? '#FF6B1A' : running || done ? GOLD : 'rgba(244,241,234,0.12)'}`,
+        boxShadow: isHovered
+          ? '0 0 0 4px rgba(255,107,26,0.18), 0 24px 50px rgba(0,0,0,0.35)'
+          : running
+          ? '0 0 0 6px rgba(215,196,158,0.18), 0 24px 50px rgba(0,0,0,0.35)'
+          : '0 18px 40px rgba(0,0,0,0.25)',
         transition: 'border-color 0.4s, box-shadow 0.4s',
         overflow: 'hidden',
         cursor: 'default',
@@ -448,6 +452,7 @@ export default function Skills() {
               dimOpacity={isDark ? 0.45 : 0.72}
               onEnter={() => setHovered(i)}
               onLeave={() => setHovered(null)}
+              isHovered={hovered === i}
               nodeRef={(el) => (nodeRefs.current[i + 1] = el)}
             />
           ))}

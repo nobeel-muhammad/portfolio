@@ -21,6 +21,21 @@ const OPEN_TO = ['Full-time', 'Freelance', 'Remote'];
 const TOPICS = ['Full-time role', 'Freelance project', 'Collaboration', 'Just saying hi'];
 const WHATSAPP_TEXT = 'Hi! I came across your portfolio and would like to connect.';
 
+const GmailIcon = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    <defs>
+      <linearGradient id="gmailGrad" gradientUnits="userSpaceOnUse" x1="2" y1="12" x2="22" y2="12">
+        <stop offset="0" stopColor="#EA4335" />
+        <stop offset="0.35" stopColor="#FBBC04" />
+        <stop offset="0.65" stopColor="#34A853" />
+        <stop offset="1" stopColor="#4285F4" />
+      </linearGradient>
+    </defs>
+    <rect x="2" y="4" width="20" height="16" rx="2" stroke="url(#gmailGrad)" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" stroke="url(#gmailGrad)" />
+  </svg>
+);
+
 function getColors(isDark) {
   return isDark
     ? { bg: '#121018', text: '#F4F1EA', muted: 'rgba(244,241,234,0.55)', line: 'rgba(244,241,234,0.14)', tile: '#1d1a28', tileEdge: 'rgba(244,241,234,0.08)' }
@@ -51,7 +66,7 @@ function useLocalTime() {
     const id = setInterval(() => setNow(new Date()), 15000);
     return () => clearInterval(id);
   }, []);
-  const time = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: TIMEZONE }).format(now);
+  const time = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', hour12: true, timeZone: TIMEZONE }).format(now);
   const hour = Number(new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: TIMEZONE }).format(now));
   const visitorOffset = -now.getTimezoneOffset() / 60;
   const diff = TZ_OFFSET_HOURS - visitorOffset;
@@ -64,11 +79,11 @@ function useLocalTime() {
 /* ------------------------------------------------------------------ */
 /* Quick action tile                                                   */
 /* ------------------------------------------------------------------ */
-function ActionTile({ href, icon, label, sub, primary, delay, inView, onClick, isDark }) {
+function ActionTile({ href, icon, label, sub, primary, light, blue, delay, inView, onClick, isDark }) {
   // Light theme has a gold page background, so the primary tile goes dark with gold text there
-  const bg = primary ? (isDark ? GOLD : '#121018') : isDark ? PANEL : '#343148';
-  const fg = primary ? (isDark ? '#1d1a28' : GOLD) : PANEL_TEXT;
-  const edge = primary ? GOLD : 'rgba(244,241,234,0.08)';
+  const bg = primary ? '#25D366' : blue ? '#4285F4' : light ? '#FFFFFF' : isDark ? PANEL : '#343148';
+  const fg = primary ? '#FFFFFF' : blue ? '#FFFFFF' : light ? '#111111' : PANEL_TEXT;
+  const edge = primary ? '#25D366' : blue ? '#4285F4' : light ? '#FFFFFF' : 'rgba(244,241,234,0.08)';
   return (
     <motion.a
       href={href}
@@ -101,7 +116,7 @@ function ActionTile({ href, icon, label, sub, primary, delay, inView, onClick, i
       </div>
       <div>
         <div style={{ fontSize: '0.9rem', fontWeight: 700 }}>{label}</div>
-        <div className="mono" style={{ fontSize: '0.52rem', letterSpacing: '0.08em', opacity: 0.65, marginTop: 2 }}>{sub}</div>
+        <div className="mono" style={{ fontSize: '0.52rem', letterSpacing: '0.08em', opacity: primary ? 1 : 0.65, color: primary ? '#075E54' : 'inherit', marginTop: 2 }}>{sub}</div>
       </div>
     </motion.a>
   );
@@ -319,8 +334,8 @@ export default function MobileContact({ isDark, sectionRef, emailConfig }) {
       {/* Quick actions */}
       <div ref={actionsRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginTop: '1.5rem' }}>
         <ActionTile href={waHref} icon={<MessageCircle size={20} />} label="WhatsApp" sub="FASTEST" primary delay={0} inView={actionsIn} isDark={isDark} />
-        <ActionTile href={`tel:+${PHONE_RAW}`} icon={<Phone size={20} />} label="Call" sub={PHONE_DISPLAY.slice(-8)} delay={0.08} inView={actionsIn} isDark={isDark} />
-        <ActionTile href={`mailto:${EMAIL}`} icon={<Mail size={20} />} label="Email" sub="DIRECT" delay={0.16} inView={actionsIn} isDark={isDark} />
+        <ActionTile href={`tel:+${PHONE_RAW}`} icon={<Phone size={20} />} blue label="Call" sub={PHONE_DISPLAY.slice(-8)} delay={0.08} inView={actionsIn} isDark={isDark} />
+        <ActionTile href={`mailto:${EMAIL}`} icon={<GmailIcon size={20} />} light label="Email" sub="DIRECT" delay={0.16} inView={actionsIn} isDark={isDark} />
       </div>
 
       {/* Copy email */}
